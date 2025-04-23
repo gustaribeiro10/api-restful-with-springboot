@@ -4,43 +4,19 @@ A simple REST API for creating, retrieving, updating, and deleting products, bui
 
 ✨ Features
 
-Verb
+Verb     Endpoint        Description
 
-Endpoint
+POST     /products       Registers a new product.
 
-Description
+GET      /products       Lists all products with HATEOAS links.
 
-POST
+GET      /products/{id}  Retrieves a product by UUID.
 
-/products
+PUT      /products/{id}  Updates the name and price of an existing product.
 
-Registers a new product.
+DELETE   /products/{id}  Removes a product.
 
-GET
-
-/products
-
-Lists all products with HATEOAS links.
-
-GET
-
-/products/{id}
-
-Retrieves a product by UUID.
-
-PUT
-
-/products/{id}
-
-Updates the name and price of an existing product.
-
-DELETE
-
-/products/{id}
-
-Removes a product.
-
-Each response includes HATEOAS links that make resource navigation easier.
+Each response includes links that make resource navigation easier.
 
 🚀 Running locally
 
@@ -80,7 +56,7 @@ spring‑boot‑starter‑data‑jpa – JPA/Hibernate integration
 
 spring‑boot‑starter‑validation – Jakarta Bean Validation
 
-spring‑boot‑starter‑hateoas – HATEOAS links
+spring‑boot‑starter‑ –  links
 
 postgresql – JDBC driver
 
@@ -94,6 +70,6 @@ BeanUtils.copyProperties copies data from DTO to entity.
 
 @Valid on endpoints triggers validation declared in ProductRecordDto.
 
-HATEOAS: each loaded product receives a self link, and the item endpoint adds a link back to the list.
+: each loaded product receives a self link, and the item endpoint adds a link back to the list.
 
 DDL‑auto update: Hibernate automatically creates/updates the TB_PRODUCTS table.
