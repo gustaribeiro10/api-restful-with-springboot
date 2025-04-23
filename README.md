@@ -42,17 +42,6 @@ Removes a product.
 
 Each response includes HATEOAS links that make resource navigation easier.
 
-🗂️ Project structure
-
-└── src/main/java/com/example/springboot
-    ├── controllers   → REST layer
-    ├── dtos          → transfer/validation objects
-    ├── models        → JPA entities + HATEOAS
-    ├── repositories  → Spring Data interfaces
-    └── SpringbootApplication.java → entry point
-└── src/main/resources
-    └── application.properties     → DB & JPA config
-
 🚀 Running locally
 
 Prerequisites
